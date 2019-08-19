@@ -27,8 +27,7 @@ class BlogsController < ApplicationController
 
   def update
     @blog = Blog.find(params[:id])
-    @blog.update(text: params[:text])
-    redirect_to("/")
+    @blog.update(text: blog_params[:text])
     
   end
  
