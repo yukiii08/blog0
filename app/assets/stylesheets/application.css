@@ -1,0 +1,45 @@
+
+
+.box1{
+  
+  width: 300px;
+  height: 200px;
+  
+  float:left;
+
+}
+
+.contents{
+  float:right;
+  width: 800px;
+}
+
+.box2 {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: double 5px #b9babb;
+}
+.box2 p {
+  margin: 0; 
+  padding: 0;
+  
+}
+
+.big{
+  display: flex;
+
+  width: 100vw;
+  height: 100vh;
+ 
+}
+.box3{
+ 
+  width: 300x;
+  height: 200px;
+
+  float:right;
+
+}
+.more_list{
+  text-align: right;
+}

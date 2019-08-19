@@ -1,0 +1,13 @@
+<div class="contents ">
+ <div class="container">
+  <%= form_with(model: Blog.new,local: true) do |form| %>
+    <h3>
+      投稿する
+    </h3>
+    
+    <textarea placeholder="text" name="text" cols="30" rows="10"></textarea>
+    <input type="submit" value="SENT">
+  <% end %>
+</div>
+</div>
+

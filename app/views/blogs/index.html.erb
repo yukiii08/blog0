@@ -1,0 +1,19 @@
+<div class="box1">
+</div>
+<div class="contents" >
+  <% @blogs.each do |blog| %>
+  
+    <%= render partial: "blog", locals: { blog: blog } %>
+   
+  <% end %>
+  <%= paginate(@blogs) %>
+</div>
+
+    <div class="box3">
+    </div>
+
+
+
+
+
+

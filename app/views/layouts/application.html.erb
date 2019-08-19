@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog0</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+   
+    <style type="text/css" href="./style.css"></style>
+
+     <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <script   src="https://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+ 
+  <nav>
+        <nav class="#ce93d8 purple lighten-3">
+          <div class="nav-wrapper">
+            <a class="brand-logo" href="/blogs">BLOG</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+            <% if user_signed_in? %>
+
+
+              <li><div class="btn"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></div></li>
+              <li><div class="btn"><a href="/blogs/new">新規投稿</a></div></li>
+            <% else %>  
+
+              <li><div class="btn"><%= link_to "ログイン", new_user_session_path, class: 'post' %></div></li>
+              <li><div class="btn"><%= link_to "新規登録", new_user_registration_path, class: 'post' %></div></li>
+              
+              
+
+             <% end %> 
+
+
+
+            </ul>
+          </div>
+        </nav>
+        </nav>
+        <div = class="big">
+    <%= yield %>
+      </div>
+  </body>
+</html>
